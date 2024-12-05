@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Downloader & Converter</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Downloader & Converter</h1>
+        
+        <div class="settings-section">
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label for="defaultFormat">Default Format:</label>
+                <select id="defaultFormat">
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="webp">WebP</option>
+                </select>
+            </div>
+            
+            <div class="setting-item">
+                <label for="namePattern">File Name Pattern:</label>
+                <input type="text" id="namePattern" placeholder="image_{timestamp}">
+            </div>
+            
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="askLocation">
+                    Always ask for save location
+                </label>
+            </div>
+            
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="showDownloadButton">
+                    Show download button on images
+                </label>
+            </div>
+        </div>
+
+        <div class="status-section">
+            <div id="status-message"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
